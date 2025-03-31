@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>식당 예약</title>
+</head>
+<body>
+    <h2>식당 예약하기</h2>
+    <form action = "dummy" method = "get">
+        <fieldset>
+            <legend>예약자 정보</legend>
+            <label>예약자 : <input type="name"></label><br><br>
+            <label>연락처 : <input type="telephone" placeholder="010-1234-5678"></label>
+        </fieldset><br>
+        <fieldset>
+            <legend>예약 정보</legend>
+            <label>날짜: <input type = "date" name = "date" value = "2023-10-03"></label><br><br>
+            <label>사간: <input type = "time" name = "date" value = "18:00"></label><br><br>
+            <label>예약인원: 
+                <select name = "people" size = "1">
+                    <option value = "2">2명</option>
+                    <option value = "3">3명</option>
+                    <option value = "4" selected>4명</option>
+                    <option value = "5">5명</option>
+                    <option value = "6">6명</option>
+                    <option value = "7">7명</option>
+                    <option value = "8">8명</option>
+                </select>
+            </label><br><br>
+            <label>위치: 본관<input type="radio" name="place" value="mainPlace" checked></label>
+            <label>별관<input type="radio" name="place" value="subPlace"></label><br><br>
+            <label>옵션: 아기의자<input type="checkbox" name="option" value="babyChair"></label>
+            <label>채식요리<input type="checkbox" name="option" value="vegan"></label>
+            <label>단독룸<input type="checkbox" name="option" value="privateRoom"></label>
+        </fieldset><br>
+        <button type = "submit">예약</button>
+        <button type = "reset">취소</button>
+    </form>
+    
+
+
+</body>
+</html>
