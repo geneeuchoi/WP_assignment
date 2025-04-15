@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rainbowflower</title>
+    <style>
+        @keyframes leafcolor1 {
+            0% { background-color: red;}
+            25% { background-color: green;}
+            50% { background-color: blue;}
+            75% { background-color: magenta;}
+            100% { background-color: red;}
+        }
+
+        @keyframes leafcolor2 {
+            0% { background-color: magenta;}
+            25% { background-color: red;}
+            50% { background-color: green;}
+            75% { background-color: blue;}
+            100% { background-color: magenta;}
+        }
+
+        @keyframes leafcolor3 {
+            0% { background-color: green;}
+            25% { background-color: blue;}
+            50% { background-color: magenta;}
+            75% { background-color: red;}
+            100% { background-color: green;}
+        }
+
+        @keyframes leafcolor4 {
+            0% { background-color: blue;}
+            25% { background-color: magenta;}
+            50% { background-color: red;}
+            75% { background-color: green;}
+            100% { background-color: blue;}
+        }
+
+        #leaf1 { 
+            border-radius: 0px 50px 0px 50px;
+            width: 80px;
+            height: 80px;
+            border: 5px outset cyan;
+            animation-name: leafcolor1;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+        }
+        #leaf2 {
+            border-radius: 50px 0px 50px 0px;
+            width: 80px;
+            height: 80px;
+            border: 5px outset cyan;
+            position: relative;
+            left: 100px;
+            top: -105px;
+            animation-name: leafcolor2;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+        }
+        #leaf3 {
+            border-radius: 50px 0px 50px 0px;
+            width: 80px;
+            height: 80px;
+            border: 5px outset cyan;
+            position: relative;
+            top: -110px;
+            animation-name: leafcolor3;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+        }
+        #leaf4 {
+            border-radius: 0px 50px 0px 50px;
+            width: 80px;
+            height: 80px;
+            border: 5px outset cyan;
+            position: relative;
+            left: 100px;
+            top: -215px;
+            animation-name: leafcolor4;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+        }
+        p {
+            color: white;
+            text-align: center;
+            font-weight: bold;
+            line-height: 80px;
+        }
+    </style>
+</head>
+<body>
+    <p id="leaf1">HTML</p><p id="leaf2">CSS</p>
+    <p id="leaf3">JS</p><p id="leaf4">WEB</p>
+</body>
+</html>
