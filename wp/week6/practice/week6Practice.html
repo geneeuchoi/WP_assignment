@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="쾅 애니메이션" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes textColorAni {
+                from {font-size: 100%; color: black;}
+                50% {font-size: 1000%; color: red;}
+                to {font-size: 100%; color: black;}
+        }
+
+        #text {
+        animation-name: textColorAni;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        }
+    </style>
+</head>
+<body>
+    <h3>실습3. 체스 보드</h3>
+    <p>학번: 202103510 이름: 홍길동</p>
+    <span id="text">쾅!</span>
+    
+</body>
+</html>
