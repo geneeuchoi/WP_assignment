@@ -19,6 +19,7 @@ while (i < data.length) {
     let height = data[i+1] * 0.01;
     let weight = data[i+2];
     let bmi = weight / (height * height);
+    let bmiIndex = Math.floor(bmi);
 
     console.log("이름:", name);
     console.log("신장:", height * 100, "cm");
@@ -34,8 +35,8 @@ while (i < data.length) {
         console.log("판정: 비만 (bmi =", bmi, ")");
     }
 
-    console.log("도표:", fig1.slice(0, bmi) + fig0.slice(bmi, fig0.length));
-    console.log("    ", fig2)
+    console.log("도표:", fig1.slice(0, bmiIndex) + fig0.slice(bmiIndex));
+    console.log("    ", fig2);
 
     i += 3;
 }
