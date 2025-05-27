@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dooly game</title>
+</head>
+<body>
+    <script>
+        window.onload = function() {
+            const dooly = document.getElementById("dooly");
+            const stepInput = document.getElementById("step");
+            const scoreInput = document.getElementById("score");
+            let posX = 0, posY = 0;
+            let dirX = 1, dirY = 1;
+
+            setInterval(() => {
+                let step = parseInt(stepInput.value, 10);
+
+                posX += step * dirX;
+                posY += step * dirY;
+
+                if (posX > window.innerWidth - dooly.offsetWidth) {
+                    posX = window.innerWidth - dooly.offsetWidth;
+                    dirX = -1;
+                } else if (posX < 0) {
+                    posX = 0;
+                    dirX = 1;
+                }
+
+                if (posY > window.innerHeight - dooly.offsetHeight) {
+                    posY = window.innerHeight - dooly.offsetHeight;
+                    dirY = -1;
+                } else if (posY < 0) {
+                    posY = 0;
+                    dirY = 1;
+                }
+
+                dooly.style.left = posX + "px";
+                dooly.style.top = posY + "px";
+            }, 100);
+
+        dooly.onmousedown = function() {
+                let step = parseInt(stepInput.value, 10);
+                let score = parseInt(scoreInput.value, 10);
+
+                step += 10;
+                score *= 2;
+
+                stepInput.value = step;
+                scoreInput.value = score;
+        }
+
+    }
+    </script>
+    <p>&lt;실습 7. 둘리를 잡아라&gt; 학번: 202103510 이름: 최유진</p>
+    <label>Score <input type="number" id="score" value = "0"></label>
+    <label>Step <input type="number" id="step" value = "1"></label> <br>
+    <img src = "dooly.jpg" alt = "dooly" id = "dooly" style = "position:absolute;">
+
+</body>
+</html>
